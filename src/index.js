@@ -1,4 +1,4 @@
-const { webm, mp4 } = require("./media.js");
+const { mp4 } = require("./media.js");
 
 // Detect iOS browsers < version 10
 const oldIOS =
@@ -39,7 +39,6 @@ class NoSleep {
       this.noSleepVideo.setAttribute("title", "No Sleep");
       this.noSleepVideo.setAttribute("playsinline", "");
 
-      this._addSourceToVideo(this.noSleepVideo, "webm", webm);
       this._addSourceToVideo(this.noSleepVideo, "mp4", mp4);
 
       this.noSleepVideo.addEventListener("loadedmetadata", () => {
